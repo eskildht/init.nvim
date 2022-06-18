@@ -175,7 +175,7 @@ let g:startify_lists = [
 
 " bookmark examples
 let  g:startify_bookmarks =  [
-    \ {'v': '~/.config/nvim'},
+    \ {'v': '~/.config/nvim/init.vim'},
     \ {'d': '~/.dotfiles' }
     \ ]
 
