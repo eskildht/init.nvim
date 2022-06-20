@@ -428,6 +428,7 @@ xmap <leader>a <Plug>(coc-codeaction-selected)
 " fugitive mappings
 nmap <leader>gd :Gdiffsplit<CR>
 nmap <leader>gb :Git blame<CR>
+nmap <leader>gg :Git<CR>}j
 
 " tmux navigator
 nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
