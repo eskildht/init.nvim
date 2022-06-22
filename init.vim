@@ -332,10 +332,6 @@ nmap <S-Tab> :bprevious<CR>
 noremap <leader>e :PlugInstall<CR>
 noremap <C-q> :q<CR>
 
-" new line in normal mode and back
-map <Enter> o<ESC>
-map <S-Enter> O<ESC>
-
 " switch between splits using ctrl + {h,j,k,l}
 inoremap <C-h> <C-\><C-N><C-w>h
 inoremap <C-j> <C-\><C-N><C-w>j
