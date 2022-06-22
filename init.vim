@@ -39,6 +39,8 @@ Plug 'christoomey/vim-tmux-navigator'                   " seamless vim and tmux 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
+Plug 'francoiscabrol/ranger.vim'                        " ranger
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 "}}}
@@ -212,6 +214,9 @@ let g:tmux_navigator_no_mappings = 1
 
 " semshi settings
 let g:semshi#error_sign	= v:false                       " let ms python lsp handle this
+
+"" ranger
+let g:ranger_map_keys = 0
 
 "" FZF
 let g:fzf_action = {
