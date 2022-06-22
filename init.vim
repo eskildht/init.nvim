@@ -34,7 +34,6 @@ Plug 'tpope/vim-fugitive'                               " git support
 Plug 'psliwka/vim-smoothie'                             " some very smooth ass scrolling
 Plug 'wellle/tmux-complete.vim'                         " complete words from a tmux panes
 Plug 'tpope/vim-eunuch'                                 " run common Unix commands inside Vim
-Plug 'machakann/vim-sandwich'                           " make sandwiches
 Plug 'christoomey/vim-tmux-navigator'                   " seamless vim and tmux navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'memgraph/cypher.vim'
@@ -214,11 +213,6 @@ let g:tmux_navigator_no_mappings = 1
 " semshi settings
 let g:semshi#error_sign	= v:false                       " let ms python lsp handle this
 
-"" NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
-let g:NERDTreeMapOpenSplit="s"
-let g:NERDTreeMapOpenVSplit="v"
-
 "" FZF
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -356,6 +350,11 @@ nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " markdown preview
 au FileType markdown nmap <leader>m :MarkdownPreview<CR>
+
+"" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenSplit="s"
+let g:NERDTreeMapOpenVSplit="v"
 
 "" FZF
 nnoremap <silent> <leader>f :Files<CR>
