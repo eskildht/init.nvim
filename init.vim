@@ -216,6 +216,8 @@ let g:semshi#error_sign	= v:false                       " let ms python lsp hand
 
 "" NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenSplit="s"
+let g:NERDTreeMapOpenVSplit="v"
 
 "" FZF
 let g:fzf_action = {
