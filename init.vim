@@ -217,6 +217,7 @@ let g:semshi#error_sign	= v:false                       " let ms python lsp hand
 
 "" ranger
 let g:ranger_map_keys = 0
+nmap <leader>x :Ranger<CR>
 
 "" FZF
 let g:fzf_action = {
