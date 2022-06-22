@@ -63,6 +63,13 @@
   // list settings
   "list.source.grep.command": "rg",
 
+  // git settings
+  "git.topRemovedSign.text": "▌",
+  "git.changeRemovedSign.text": "▌",
+  "git.removedSign.text": "▌",
+  "git.addedSign.text": "▌",
+  "git.changedSign.text": "▌",
+
   // other language specific settings
   "html.autoClosingTags": true,
   "prettier.proseWrap": "always",
