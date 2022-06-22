@@ -398,8 +398,7 @@ nmap <leader>jr <Plug>(coc-references)
 
 " other coc actions
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-nmap <leader>a <Plug>(coc-codeaction-line)
-xmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a :CocDiagnostics<CR>
 
 " fugitive mappings
 nmap <leader>gd :Gdiffsplit<CR>
