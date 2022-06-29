@@ -71,7 +71,7 @@ set history=1000                                        " history limit
 set backspace=indent,eol,start                          " sensible backspacing
 set undofile                                            " enable persistent undo
 set undodir=/tmp                                        " undo temp file directory
-set foldlevel=0                                         " open all folds by default
+set nofoldenable                                        " open all folds by default
 set inccommand=nosplit                                  " visual feedback while substituting
 set showtabline=0                                       " always show tabline
 set grepprg=rg\ --vimgrep                               " use rg as default grepper
@@ -264,7 +264,7 @@ autocmd BufReadPost *
 " python renaming and folding
 augroup python
     autocmd FileType python nnoremap <leader>rn :Semshi rename <CR>
-    autocmd FileType python set foldmethod=manual
+    autocmd FileType python set foldmethod=syntax
     autocmd FileType python syn sync fromstart
     autocmd FileType python syn region foldImports start='"""' end='"""' fold keepend
 augroup end
