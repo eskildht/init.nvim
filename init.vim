@@ -35,10 +35,12 @@ Plug 'psliwka/vim-smoothie'                             " some very smooth ass s
 Plug 'wellle/tmux-complete.vim'                         " complete words from a tmux panes
 Plug 'tpope/vim-eunuch'                                 " run common Unix commands inside Vim
 Plug 'christoomey/vim-tmux-navigator'                   " seamless vim and tmux navigation
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'shuntaka9576/preview-asciidoc.nvim', { 'do': 'cd app && yarn install' }
+Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
 "}}}
@@ -81,7 +83,7 @@ set scrolljump=5
 set lazyredraw
 set redrawtime=10000
 set synmaxcol=180
-set re=1
+set re=0
 
 " required by coc
 set hidden
@@ -140,6 +142,7 @@ let g:coc_global_extensions = [
             \'coc-json',
             \'coc-css',
             \'coc-html',
+            \'coc-tsserver',
             \'coc-yaml',
             \'coc-lists',
             \'coc-snippets',
@@ -261,7 +264,7 @@ autocmd BufReadPost *
 " python renaming and folding
 augroup python
     autocmd FileType python nnoremap <leader>rn :Semshi rename <CR>
-    autocmd FileType python set foldmethod=syntax
+    autocmd FileType python set foldmethod=manual
     autocmd FileType python syn sync fromstart
     autocmd FileType python syn region foldImports start='"""' end='"""' fold keepend
 augroup end
@@ -348,6 +351,8 @@ nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " markdown preview
 au FileType markdown nmap <leader>m :MarkdownPreview<CR>
+" asciidoc preview
+au FileType asciidoc nmap <leader>m :AsciiDocPreview<CR>
 
 "" NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
