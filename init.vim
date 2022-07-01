@@ -103,7 +103,6 @@ hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highligh
 hi NonText guifg=bg                                     " mask ~ on empty lines
 hi clear CursorLineNr                                   " use the theme color for relative number
 hi CursorLineNr gui=bold                                " make relative number bold
-hi SpellBad guifg=NONE gui=bold,undercurl               " misspelled words
 
 " colors for git (especially the gutter)
 hi DiffAdd  guibg=#0f111a guifg=#43a047
@@ -234,11 +233,6 @@ au BufEnter * set fo-=c fo-=r fo-=o                     " stop annoying auto com
 au FileType help wincmd L                               " open help in vertical split
 au BufWritePre * :%s/\s\+$//e                           " remove trailing whitespaces before saving
 au CursorHold * silent call CocActionAsync('highlight') " highlight match on cursor hold
-
-" enable spell only if file type is normal text
-let spellable = ['markdown', 'gitcommit', 'txt', 'text', 'liquid', 'rst']
-autocmd BufEnter * if index(spellable, &ft) < 0 | set nospell | else | set spell | endif
-
 
 " coc completion popup
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
