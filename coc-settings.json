@@ -54,9 +54,6 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": "ஐ",
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
-  "diagnostic.virtualText": true,
-  "diagnostic.enableMessage": "never",
   // list settings
   "list.source.grep.command": "rg",
   // git settings
