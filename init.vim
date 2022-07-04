@@ -38,6 +38,7 @@ Plug 'christoomey/vim-tmux-navigator'                   " seamless vim and tmux 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-dispatch'
 Plug 'preservim/nerdtree'
 Plug 'habamax/vim-asciidoctor'
 Plug 'wesQ3/vim-windowswap'
