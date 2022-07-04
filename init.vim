@@ -39,7 +39,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
-Plug 'shuntaka9576/preview-asciidoc.nvim', { 'do': 'cd app && yarn install' }
+Plug 'habamax/vim-asciidoctor'
 Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
@@ -345,8 +345,10 @@ nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " markdown preview
 au FileType markdown nmap <leader>m :MarkdownPreview<CR>
-" asciidoc preview
-au FileType asciidoc nmap <leader>m :AsciiDocPreview<CR>
+" asciidoc generate HTML on save
+augroup ON_ASCIIDOCTOR_SAVE | au!
+    au BufWritePost *.adoc :Asciidoctor2HTML
+augroup end
 
 "" NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
