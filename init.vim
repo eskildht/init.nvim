@@ -402,7 +402,7 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>a :CocDiagnostics<CR>
 
 " fugitive mappings
-nmap <leader>gd :Gdiffsplit<CR>
+nmap <leader>gd :Gvdiffsplit!<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader>gg :Git<CR>}j
 
