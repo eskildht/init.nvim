@@ -403,6 +403,8 @@ nmap <leader>a :CocDiagnostics<CR>
 
 " fugitive mappings
 nmap <leader>gd :Gvdiffsplit!<CR>
+nmap <leader>gh :diffget //2<CR>
+nmap <leader>gl :diffget //3<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader>gg :Git<CR>}j
 
