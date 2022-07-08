@@ -40,7 +40,6 @@ Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
 Plug 'preservim/nerdtree'
-Plug 'habamax/vim-asciidoctor'
 Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
@@ -346,10 +345,6 @@ nnoremap <F2> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " markdown preview
 au FileType markdown nmap <leader>m :MarkdownPreview<CR>
-" asciidoc generate HTML on save
-augroup ON_ASCIIDOCTOR_SAVE | au!
-    au BufWritePost *.adoc :Asciidoctor2HTML
-augroup end
 
 "" NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
