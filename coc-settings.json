@@ -69,5 +69,6 @@
     "py310",
     "--line-length",
     "119"
-  ]
+  ],
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
 }
