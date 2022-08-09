@@ -366,23 +366,22 @@ vmap <F1> <plug>(fzf-maps-x)
 
 "" coc
 
-" use tab to navigate snippet placeholders
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+" remap for complete to use tab and <cr>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+inoremap <silent><expr> <c-j>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ <SID>check_back_space() ? "\<c-j>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><c-k> coc#pum#visible() ? coc#pum#prev(1) : "\<c-k>"
 
-" Use enter to accept snippet expansion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
+" refresh
+inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
+hi CocSearch ctermfg=12 guifg=#18A3FF
+hi CocMenuSel ctermbg=109 guibg=#13354A
 " other stuff
 nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>o :OR <CR>
 
 " jump stuff
 nmap <leader>jd <Plug>(coc-definition)
