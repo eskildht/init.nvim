@@ -33,7 +33,6 @@ Plug 'mhinz/vim-startify'                               " cool start up screen
 Plug 'tpope/vim-fugitive'                               " git support
 Plug 'psliwka/vim-smoothie'                             " some very smooth ass scrolling
 Plug 'wellle/tmux-complete.vim'                         " complete words from a tmux panes
-Plug 'tpope/vim-eunuch'                                 " run common Unix commands inside Vim
 Plug 'christoomey/vim-tmux-navigator'                   " seamless vim and tmux navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'memgraph/cypher.vim'
