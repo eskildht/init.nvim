@@ -383,12 +383,12 @@ hi CocMenuSel ctermbg=109 guibg=#13354A
 nmap <leader>rn <Plug>(coc-rename)
 
 " jump stuff
-nmap <leader>jdd <Plug>(coc-definition)
-nmap <leader>jdv :call CocAction('jumpDefinition', 'vsplit')<CR>
-nmap <leader>jds :call CocAction('jumpDefinition', 'split')<CR>
-nmap <leader>jyy <Plug>(coc-type-definition)
-nmap <leader>jyv :call CocAction('jumpTypeDefinition', 'vsplit')<CR>
-nmap <leader>jys :call CocAction('jumpTypeDefinition', 'split')<CR>
+nmap <leader>jd <Plug>(coc-definition)
+nmap <leader>jvd :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <leader>jsd :call CocAction('jumpDefinition', 'split')<CR>
+nmap <leader>jy <Plug>(coc-type-definition)
+nmap <leader>jvy :call CocAction('jumpTypeDefinition', 'vsplit')<CR>
+nmap <leader>jsy :call CocAction('jumpTypeDefinition', 'split')<CR>
 nmap <leader>ji <Plug>(coc-implementation)
 nmap <leader>jr <Plug>(coc-references)
 
