@@ -1,15 +1,6 @@
 {
   // normal settings
   "coc.preferences.snippetStatusText": "Ⓢ ",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "html",
-    "css",
-    "json",
-    "python",
-    "markdown",
-    "typescript"
-  ],
   // suggest settings
   "suggest.noselect": false,
   "suggest.detailField": "abbr",
