@@ -119,5 +119,13 @@
         }
       }
     }
-  }
+  },
+  "colors.filetypes": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "css"
+  ]
 }

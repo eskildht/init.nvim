@@ -39,6 +39,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
 Plug 'preservim/nerdtree'
 Plug 'wesQ3/vim-windowswap'
+Plug 'brenoprata10/nvim-highlight-colors'
 call plug#end()
 
 "}}}
@@ -126,32 +127,17 @@ else
   let g:python3_host_prog = systemlist('which python3')[0]
 endif
 
+" highlight
+lua require('nvim-highlight-colors').setup {
+            \ render = 'background',
+            \ enable_tailwind = true
+            \ }
+
 "" coc
 
 " Navigate snippet placeholders using tab
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
-
-" list of the extensions to make sure are always installed
-let g:coc_global_extensions = [
-            \'coc-yank',
-            \'coc-pairs',
-            \'coc-json',
-            \'coc-css',
-            \'coc-html',
-            \'coc-tsserver',
-            \'coc-yaml',
-            \'coc-lists',
-            \'coc-snippets',
-            \'coc-pyright',
-            \'coc-clangd',
-            \'coc-xml',
-            \'coc-syntax',
-            \'coc-git',
-            \'coc-marketplace',
-            \'coc-highlight',
-            \'coc-sh',
-            \]
 
 " indentLine
 let g:indentLine_char_list = ['▏', '¦', '┆', '┊']
