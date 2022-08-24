@@ -354,6 +354,21 @@ imap <F1> <plug>(fzf-maps-i)
 vmap <F1> <plug>(fzf-maps-x)
 
 "" coc
+let g:coc_global_extensions = [
+        \ "coc-pairs",
+        \ "coc-marketplace",
+        \ "coc-git",
+        \ "coc-html",
+        \ "coc-emmet",
+        \ "coc-yaml",
+        \ "coc-tsserver",
+        \ "@yaegassy/coc-tailwindcss3",
+        \ "coc-sh",
+        \ "coc-pyright",
+        \ "coc-json",
+        \ "coc-css",
+        \ "coc-clangd"
+      \ ]
 
 " remap for complete to use tab and <cr>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"

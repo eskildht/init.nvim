@@ -44,8 +44,6 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": "ஐ",
   "diagnostic.checkCurrentLine": true,
-  // list settings
-  "list.source.grep.command": "rg",
   // git settings
   "git.topRemovedSign.text": "▌",
   "git.changeRemovedSign.text": "▌",
@@ -67,50 +65,6 @@
     "black"
   ],
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-  "languageserver": {
-    "tailwind-lsp": {
-      "command": "tailwindcss-language-server",
-      "args": [
-        "--stdio"
-      ],
-      "filetypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-      ],
-      "rootPatterns": [
-        "tailwind.config.js",
-        "tailwind.config.ts",
-        "postcss.config.js",
-        "postcss.config.ts",
-        "package.json",
-        "node_modules",
-        ".git"
-      ],
-      "settings": {
-        "tailwindCSS": {
-          "validate": true,
-          "lint": {
-            "cssConflict": "warning",
-            "invalidApply": "error",
-            "invalidScreen": "error",
-            "invalidVariant": "error",
-            "invalidConfigPath": "error",
-            "invalidTailwindDirective": "error",
-            "recommendedVariantOrder": "warning"
-          },
-          "classAttributes": [
-            "class",
-            "className",
-            "classList",
-            "ngClass"
-          ],
-          "experimental": {}
-        }
-      }
-    }
-  },
   "colors.filetypes": [
     "html",
     "javascript",
