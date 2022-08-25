@@ -100,6 +100,7 @@ colorscheme vim-material
 hi Pmenu guibg='#00010a' guifg=white                    " popup menu colors
 hi Comment gui=italic cterm=italic                      " italic comments
 hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highlight color
+hi Visual guibg=#90ee90 guifg=#ff00ff gui=NONE          " visual highlight color
 hi NonText guifg=bg                                     " mask ~ on empty lines
 hi clear CursorLineNr                                   " use the theme color for relative number
 hi CursorLineNr gui=bold                                " make relative number bold
