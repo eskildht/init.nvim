@@ -40,7 +40,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'preservim/nerdtree'
 Plug 'wesQ3/vim-windowswap'
 Plug 'brenoprata10/nvim-highlight-colors'
-Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
 "}}}
@@ -128,9 +127,6 @@ if glob('~/.python3') != ''
 else
   let g:python3_host_prog = systemlist('which python3')[0]
 endif
-
-" autosave
-lua require('auto-save').setup {}
 
 " highlight
 lua require('nvim-highlight-colors').setup {
