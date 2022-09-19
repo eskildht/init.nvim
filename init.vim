@@ -40,6 +40,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'preservim/nerdtree'
 Plug 'wesQ3/vim-windowswap'
 Plug 'brenoprata10/nvim-highlight-colors'
+Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
 "}}}
@@ -129,10 +130,19 @@ else
 endif
 
 " highlight
-lua require('nvim-highlight-colors').setup {
+lua << EOF
+    require('nvim-highlight-colors').setup {
             \ render = 'background',
             \ enable_tailwind = true
             \ }
+EOF
+
+" auto save
+lua << EOF
+    require("auto-save").setup {
+        enabled = false,
+    }
+EOF
 
 "" coc
 
@@ -304,7 +314,7 @@ nmap \ <leader>q
 map <F6> :Startify <CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>q :bd<CR>
-nmap <leader>w :w<CR>
+nnoremap <leader>w :ASToggle<CR>
 map <leader>s :Format<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
