@@ -17,6 +17,7 @@ Plug 'ryanoasis/vim-devicons'                           " pretty icons everywher
 Plug 'luochen1990/rainbow'                              " rainbow parenthesis
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'gregsexton/MatchTag'                              " highlight matching html tags
+Plug 'windwp/nvim-ts-autotag'
 "}}}
 
 " ================= Functionalities ================= "{{{
@@ -149,6 +150,9 @@ lua << EOF
       indent = {
         enable = false,
         disable = {},
+      },
+      autotag = {
+        enable = true,
       },
       ensure_installed = {
           "bash",
