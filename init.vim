@@ -44,6 +44,7 @@ Plug 'Pocco81/auto-save.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "}}}
@@ -135,6 +136,33 @@ EOF
 lua << EOF
     require("auto-save").setup {
         enabled = false,
+    }
+EOF
+
+" Tresitter
+lua << EOF
+    require("nvim-treesitter.configs").setup {
+      highlight = {
+        enable = true,
+        disable = {},
+      },
+      indent = {
+        enable = false,
+        disable = {},
+      },
+      ensure_installed = {
+          "bash",
+          "python",
+          "fortran",
+          "tsx",
+          "typescript",
+          "javascript",
+          "html",
+          "css",
+          "scss",
+          "json",
+          "yaml",
+      },
     }
 EOF
 
