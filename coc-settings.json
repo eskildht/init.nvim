@@ -1,6 +1,4 @@
 {
-  // normal settings
-  "coc.preferences.snippetStatusText": "Ⓢ ",
   // suggest settings
   "suggest.noselect": false,
   "suggest.detailField": "abbr",
@@ -44,12 +42,6 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": "ஐ",
   "diagnostic.checkCurrentLine": true,
-  // git settings
-  "git.topRemovedSign.text": "▌",
-  "git.changeRemovedSign.text": "▌",
-  "git.removedSign.text": "▌",
-  "git.addedSign.text": "▌",
-  "git.changedSign.text": "▌",
   // other language specific settings
   "html.autoClosingTags": true,
   "python.formatting.provider": "black",

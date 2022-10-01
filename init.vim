@@ -15,7 +15,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'ryanoasis/vim-devicons'                           " pretty icons everywhere
 Plug 'luochen1990/rainbow'                              " rainbow parenthesis
-Plug 'hzchirs/vim-material'                             " material color themes
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'gregsexton/MatchTag'                              " highlight matching html tags
 "}}}
 
@@ -41,6 +41,9 @@ Plug 'preservim/nerdtree'
 Plug 'wesQ3/vim-windowswap'
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'Pocco81/auto-save.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 "}}}
@@ -95,22 +98,13 @@ set shortmess+=c
 set signcolumn=yes
 
 " Themeing
-let g:material_style = 'oceanic'
-colorscheme vim-material
+colorscheme tokyonight-moon
 hi Pmenu guibg='#00010a' guifg=white                    " popup menu colors
 hi Comment gui=italic cterm=italic                      " italic comments
 hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highlight color
 hi Visual guibg=#90ee90 guifg=#ff00ff gui=NONE          " visual highlight color
-hi NonText guifg=bg                                     " mask ~ on empty lines
-hi clear CursorLineNr                                   " use the theme color for relative number
-hi CursorLineNr gui=bold                                " make relative number bold
 
-" colors for git (especially the gutter)
-hi DiffAdd  guibg=#0f111a guifg=#43a047
-hi DiffChange guibg=#0f111a guifg=#fdd835
-hi DiffRemoved guibg=#0f111a guifg=#e53935
-
-" coc multi cursor highlight color
+"" coc multi cursor highlight color
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 
 "}}}
@@ -408,10 +402,11 @@ nmap <leader>jr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>a :CocDiagnostics<CR>
 
-" fugitive mappings
-nmap <leader>gd :Gvdiffsplit!<CR>
-nmap <leader>gh :diffget //2<CR>
-nmap <leader>gl :diffget //3<CR>
+" git mappings
+nmap <leader>gdo :DiffviewOpen<CR>
+nmap <leader>gdc :DiffviewClose<CR>
+nmap <leader>ghf :DiffviewFileHistory %<CR>
+nmap <leader>ghb :DiffviewFileHistory<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader>gg :Git<CR>}j
 
