@@ -36,13 +36,13 @@
   },
   // diagnostic settings
   "diagnostic.virtualText": true,
-  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+  "diagnostic.virtualTextPrefix": "❯ ",
   "diagnostic.enableMessage": "never",
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
-  "diagnostic.errorSign": "✘",
+  "diagnostic.errorSign": "☠",
   "diagnostic.warningSign": "⚠",
-  "diagnostic.infoSign": "",
+  "diagnostic.infoSign": "☭",
   "diagnostic.hintSign": "ஐ",
   "diagnostic.checkCurrentLine": true,
   // other language specific settings
