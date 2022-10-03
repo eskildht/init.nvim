@@ -35,6 +35,9 @@
     "default": "\uf29c"
   },
   // diagnostic settings
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+  "diagnostic.enableMessage": "never",
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.errorSign": "✘",
