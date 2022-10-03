@@ -38,6 +38,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'memgraph/cypher.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-repeat'
 Plug 'preservim/nerdtree'
 Plug 'wesQ3/vim-windowswap'
 Plug 'brenoprata10/nvim-highlight-colors'
