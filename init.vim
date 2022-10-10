@@ -25,7 +25,6 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " LSP and more
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " fzf itself
 Plug 'junegunn/fzf.vim'                                 " fuzzy search integration
-Plug 'honza/vim-snippets'                               " actual snippets
 Plug 'Yggdroot/indentLine'                              " show indentation lines
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " better python
 Plug 'tpope/vim-commentary'                             " better commenting
@@ -173,10 +172,6 @@ lua << EOF
 EOF
 
 "" coc
-
-" Navigate snippet placeholders using tab
-let g:coc_snippet_next = '<Tab>'
-let g:coc_snippet_prev = '<S-Tab>'
 
 " indentLine
 let g:indentLine_char_list = ['▏', '¦', '┆', '┊']
@@ -344,18 +339,12 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>q :bd<CR>
 nnoremap <leader>w :ASToggle<CR>
 map <leader>s :Format<CR>
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
 noremap <leader>e :PlugInstall<CR>
 noremap <C-q> :q<CR>
 
 " switch between splits using ctrl + {h,j,k,l}
-inoremap <C-h> <C-\><C-N><C-w>h
-inoremap <C-j> <C-\><C-N><C-w>j
-inoremap <C-k> <C-\><C-N><C-w>k
-inoremap <C-l> <C-\><C-N><C-w>l
 nnoremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
+nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
